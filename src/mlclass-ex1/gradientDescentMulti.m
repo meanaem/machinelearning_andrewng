@@ -18,7 +18,10 @@ for iter = 1:num_iters
     %
 
 
-
+    prediction = ((X * theta) - y);
+    summation = (X') * prediction;
+    delta = (summation) * (alpha * (1/m));
+    theta  = theta - delta;
 
 
 
